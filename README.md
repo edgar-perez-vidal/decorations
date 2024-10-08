@@ -21,3 +21,4 @@ To install the package, you can use `pip`. You have two options:
    git clone https://github.com/edgar-perez-vidal/decorations.git
    cd decorations
    pip install -e .
+To get started, check out the decorations_tutorial notebook!
