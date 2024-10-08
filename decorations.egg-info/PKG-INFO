@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: decorations
+Version: 0.1.0
+Summary: Utilities for setting up matplotlib plots for Journal Articles
+Home-page: https://github.com/edgar-perez-vidal
+Author: Edgar P. Vidal
+Author-email: edgar.vidal@tufts.edu
+Requires-Dist: matplotlib
+Requires-Dist: cycler

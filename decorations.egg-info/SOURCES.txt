@@ -1,0 +1,6 @@
+setup.py
+decorations.egg-info/PKG-INFO
+decorations.egg-info/SOURCES.txt
+decorations.egg-info/dependency_links.txt
+decorations.egg-info/requires.txt
+decorations.egg-info/top_level.txt
