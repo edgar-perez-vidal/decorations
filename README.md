@@ -22,3 +22,4 @@ To install the package, you can use `pip`. You have two options:
    cd decorations
    pip install -e .
 To get started, check out the decorations_tutorial notebook!
+If you make use of this package, please send over any figures so I can create a link to it here!
