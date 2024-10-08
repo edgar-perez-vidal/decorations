@@ -16,7 +16,7 @@ To install the package, you can use `pip`. You have two options:
 1. **Install directly from GitHub**:
    ```bash
    pip install git+https://github.com/edgar-perez-vidal/decorations.git
-2. **Clone the repository and install locally:
+2. **Clone the repository and install locally** (Recommended for Personalization):
    ```bash  
    git clone https://github.com/edgar-perez-vidal/decorations.git
    cd decorations
