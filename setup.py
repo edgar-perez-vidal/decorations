@@ -10,8 +10,8 @@ setup(
     install_requires=[
         'matplotlib',
         'cycler',
-        'getpass',
     ],
     url='https://github.com/edgar-perez-vidal', 
-)
+    license='MIT',
 
+)
