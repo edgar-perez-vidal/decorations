@@ -1,6 +1,33 @@
+# Decorations
+
+**Utilities for setting up Matplotlib plots for Journal Articles.**
+
+## Overview
+
+The `decorations` package provides customizable settings for Matplotlib to create 
+publication-ready plots. It includes options for font size, figure size, color 
+palettes, and marker types that are particularly suitable for journals such as 
+ApJ and MNRAS.
+
+## Installation
+
+To install the package, you can use `pip`. You have two options:
+
+1. **Install directly from GitHub**:
+   ```bash
+   pip install git+https://github.com/edgar-perez-vidal/decorations.git
+2. **Clone the repository and install locally** (Recommended for Personalization):
+   ```bash  
+   git clone https://github.com/edgar-perez-vidal/decorations.git
+   cd decorations
+   pip install -e .
+To get started, check out the decorations_tutorial notebook!
+If you make use of this package, please send over any figures so I can show case it here!
+
+
 # Tutorial for the package decorations, based in Matplotlib
 
-The **decorations** package was created to address a common challenge faced by many students and researchers: the need to generate numerous test plots using basic Matplotlib settings, only to return later to beautify them for submission or feedback. This often results in extra work and inconsistent presentation quality.
+The `decorations` package was created to address a common challenge faced by many students and researchers: the need to generate numerous test plots using basic Matplotlib settings, only to return later to beautify them for submission or feedback. This often results in extra work and inconsistent presentation quality.
 
 Decorations solves this problem by offering pre-configured plotting settings that produce aesthetically pleasing visuals right from the start. The package streamlines the plotting process, enabling users to create high-quality graphics immediately, without sacrificing the flexibility to further customize their plots as needed.
 
@@ -43,13 +70,13 @@ plt.show()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_3_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_4_0.png)
     
 
 
 Pretty standard plot, don't hate it don't love it. Lets see what we can do to improve
 
-## Using the **load_plot_settings** Function
+## Using the `load_plot_settings` Function
 
 In this example, we'll demonstrate how to use the **decorations** package to create a plot with error bars and residuals. 
 
@@ -106,7 +133,7 @@ plt.show()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_8_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_9_0.png)
     
 
 
@@ -163,13 +190,13 @@ plt.tight_layout()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_10_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_11_0.png)
     
 
 
-## A closer look at error_bar_settings in plots
+## A closer look at `error_bar_settings` in plots
 
-In this example, we will generate fake data and visualize it with error bars using **error_bar_settings** dictionary. This showcases how to markers and colors are automatically cycled through. Note that **error_bar_settings** is a standard dictionary that can be costumized as needed
+In this example, we will generate fake data and visualize it with error bars using `error_bar_settings` dictionary. This showcases how to markers and colors are automatically cycled through. Note that `error_bar_settings` is a standard dictionary that can be costumized as needed
 
 
 
@@ -223,7 +250,7 @@ plt.show()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_13_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_14_0.png)
     
 
 
