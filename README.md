@@ -26,18 +26,58 @@ If you make use of this package, please send over any figures so I can show case
 
 # Tutorial for the package decorations, based in Matplotlib
 
-Motivation for creating **Decorations** Many students and researchers often create numerous test plots using basic Matplotlib settings, later spending time beautifying them before submitting for assignments or feedback. The decorations package addresses this issue by providing pre-configured plotting settings that produce aesthetically pleasing visuals from the start.
+The **decorations** package was created to address a common challenge faced by many students and researchers: the need to generate numerous test plots using basic Matplotlib settings, only to return later to beautify them for submission or feedback. This often results in extra work and inconsistent presentation quality.
 
-This package not only streamlines the plotting process, allowing for immediate use of high-quality graphics, but also retains flexibility for customization, ensuring that users can tailor their plots to meet specific needs. Enjoy!
+Decorations solves this problem by offering pre-configured plotting settings that produce aesthetically pleasing visuals right from the start. The package streamlines the plotting process, enabling users to create high-quality graphics immediately, without sacrificing the flexibility to further customize their plots as needed.
+
+With Decorations, you can focus on your data while ensuring that your plots are ready for assignments, presentations, or feedback. Enjoy!
 
 
 ```python
 from decorations import load_plot_settings, error_bar_settings
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+import numpy as np
 ```
+
+# Example Plot: Traditional Plotting Routine
+Let's create a traditional plot with a sine wave and some noisy data, including error bars to represent uncertainty in the measurements.
+
+
+```python
+# Data for the plot with added noise
+x = np.linspace(0, 2 * np.pi, 50)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+y1_noisy = y1 + 0.2 * np.random.normal(size=x.size)  # Add some noise
+
+y1_err = 0.1 * np.ones_like(y1_noisy)  # Set the error bars
+
+# Create the sine wave plot with error bars
+plt.figure()
+plt.scatter(x, y1_noisy, label='Data',)
+plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+
+# Show the plot
+plt.show()
+```
+
+
+    
+![png](decorations_tutorial_files/decorations_tutorial_3_0.png)
+    
+
+
+Pretty standard plot, don't hate it don't love it. Lets see what we can do to improve
 
 ## Using the **load_plot_settings** Function
 
-In this example, we'll demonstrate how to use the **decorations** package to create a plot with error bars and residuals. We'll make use of gridspec for multi-panel plots as well!
+In this example, we'll demonstrate how to use the **decorations** package to create a plot with error bars and residuals. 
 
 
 
@@ -52,15 +92,16 @@ load_plot_settings(
     
     # Colors for cycling through data points
     # Use a custom list for your own palette, or leave as None to use the default color-blind friendly palette
-    colors=None,  # Example: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
+    colors=None,  # default: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
     
     # Markers for plotting
     # Use a custom list for different marker shapes, or leave as None to use the default set
-    markers=None,  # Example: ['o', 's', '^', 'v', 'D', 'P', 'X']
+    markers=None,  # default: ['o', 's', '^', 'v', 'D', 'P', 'X']
     
-    latex=True  # Set to True to enable LaTeX formatting for text; set to False for plain text
+    latex=False  # Set to True to enable LaTeX formatting for text; set to False for plain text
 )
 
+# load_plot_settings() # run on the default setting shown above
 ```
 
     Hi edgar839, you have imported plooting decorations. 
@@ -71,6 +112,31 @@ load_plot_settings(
         Marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
         Cheers!
 
+
+# Lets run the exact same code as before
+
+
+```python
+# Create the sine wave plot with error bars
+plt.figure()
+plt.scatter(x, y1_noisy, label='Data',)
+plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+
+# Show the plot
+plt.show()
+```
+
+
+    
+![png](decorations_tutorial_files/decorations_tutorial_8_0.png)
+    
+
+
+ahh much better! Lets try something a little cleaner, such as a fitting fake data and seeing the residuals. In this example, we'll use **gridspec** for a multi panel plot.
 
 
 ```python
@@ -123,18 +189,20 @@ plt.tight_layout()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_4_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_10_0.png)
     
 
 
-## Using Error Bars in Plots
+## A closer look at error_bar_settings in plots
 
-In this example, we will generate fake data and visualize it with error bars using **error_bar_settings** package. This showcases how to markers and colors are automatically cycled through. Note that **error_bar_settings** is a standard dictionary that can be costumized
+In this example, we will generate fake data and visualize it with error bars using **error_bar_settings** dictionary. This showcases how to markers and colors are automatically cycled through. Note that **error_bar_settings** is a standard dictionary that can be costumized as needed
 
 
 
 ```python
 error_bar_settings
+
+# error_bar_settings['ms'] = 5 # example of changing marker size
 ```
 
 
@@ -181,7 +249,7 @@ plt.show()
 
 
     
-![png](decorations_tutorial_files/decorations_tutorial_7_0.png)
+![png](decorations_tutorial_files/decorations_tutorial_13_0.png)
     
 
 
