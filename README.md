@@ -137,7 +137,7 @@ plt.show()
     
 
 
-ahh much better! Lets try something a little cleaner, such as a fitting fake data and seeing the residuals. In this example, we'll use **gridspec** for a multi panel plot.
+ahh much better! Lets try something a little cleaner, such as a fitting fake data and seeing the residuals. In this example, we'll use `gridspec` for a multi panel plot.
 
 
 ```python
