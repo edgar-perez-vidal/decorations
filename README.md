@@ -42,7 +42,7 @@ import numpy as np
 ```
 
 # Example Plot: Traditional Plotting Routine
-Let's create a traditional plot with a sine wave and some noisy data, including error bars to represent uncertainty in the measurements.
+Let's create a traditional plot with a sine wave and some noisy data.
 
 
 ```python
