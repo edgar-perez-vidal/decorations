@@ -14,6 +14,7 @@ markers = ['o', 's', '^', 'v', 'D', 'P', 'X']  # Different marker shapes to cycl
 def load_plot_settings(
     fontsize=10, 
     figsize=(3.5, 3.5), 
+    major_tick_size = 5,
     dpi=175, 
     colors=None, 
     markers=None, 
@@ -57,18 +58,18 @@ def load_plot_settings(
 
         # Ticks settings for x axis
         "xtick.direction": 'in',
-        "xtick.major.size": 5,
+        "xtick.major.size": major_tick_size,
         "xtick.major.width": 0.5,
-        "xtick.minor.size": 2.5,
+        "xtick.minor.size": major_tick_size/2,
         "xtick.minor.width": 0.5,
         "xtick.minor.visible": True,
         "xtick.top": True,
         
         # Ticks settings for y axis
         "ytick.direction": 'in',
-        "ytick.major.size": 5,
+        "ytick.major.size": major_tick_size,
         "ytick.major.width": 0.5,
-        "ytick.minor.size": 2.5,
+        "ytick.minor.size": major_tick_size/2,
         "ytick.minor.width": 0.5,
         "ytick.minor.visible": True,
         "ytick.right": True,
