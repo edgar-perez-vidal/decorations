@@ -21,7 +21,7 @@ To install the package, you can use `pip`. You have two options:
    git clone https://github.com/edgar-perez-vidal/decorations.git
    cd decorations
    pip install -e .
-To get started, check out the decorations_tutorial notebook!
+To get started, check out the the tutorial below!
 If you make use of this package, please send over any figures so I can show case it here!
 
 
@@ -53,8 +53,6 @@ y2 = np.cos(x)
 
 y1_noisy = y1 + 0.2 * np.random.normal(size=x.size)  # Add some noise
 
-y1_err = 0.1 * np.ones_like(y1_noisy)  # Set the error bars
-
 # Create the sine wave plot with error bars
 plt.figure()
 plt.scatter(x, y1_noisy, label='Data',)
@@ -74,7 +72,7 @@ plt.show()
     
 
 
-Pretty standard plot, don't hate it don't love it. Lets see what we can do to improve
+Pretty standard plot... Lets see what we can do to improve
 
 ## Using the `load_plot_settings` Function
 
@@ -137,7 +135,7 @@ plt.show()
     
 
 
-ahh much better! Lets try something a little cleaner, such as a fitting fake data and seeing the residuals. In this example, we'll use `gridspec` for a multi panel plot.
+ahh much better! Lets try something a little cleaner, such as fitting fake data and seeing the residuals. In this example, we'll use `gridspec` for a multi-panel plot.
 
 
 ```python
