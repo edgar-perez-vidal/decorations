@@ -252,11 +252,86 @@ plt.show()
     
 
 
-To see the matplotlib parameters run the following
+# Enhancing Corner Plots with Decorations
+
+A lot of the science I do involves Bayesian inference, and visualizing the posterior distributions of our parameters is crucial. To achieve this, we often marginalize over all variables and visualize them using the `corner` package.
+
+While `corner` provides an excellent foundation for this type of analysis, `decorations`, adds a unique flair to these visualizations! It enhances the standard corner plots with custom touches that make the data stand out.
+
+Here's a simple example using synthetic data to illustrate how it works. Ideally, you would input the Markov chains sampled from packages like `emcee` or `PyMC`, but this demonstration serves to showcase the capabilities of decorations in enhancing your corner plots.
+
+
+```python
+import corner
+
+# Generate fake data
+np.random.seed(42)  # For reproducibility
+n_samples = 1000
+# Create a 3D Gaussian distribution
+mu = np.array([1, -1, 0])  # Mean
+sigma = np.array([[1, 0.5, 0], [0.5, 1, 0.5], [0, 0.5, 1]])  # Covariance matrix
+data = np.random.multivariate_normal(mu, sigma, n_samples)
+
+# Create a corner plot
+fig = corner.corner(data, 
+                    labels=[r"$\mu_1$", r"$\mu_2$", r"$\mu_3$"], 
+                    show_titles=True,
+                    truths=mu)
+
+# Show the plot
+plt.show()
+
+```
+
+
+    
+![png](decorations_quickstart_files/decorations_quickstart_14_0.png)
+    
+
+
+Super cool! To see the matplotlib parameters run the following.
 
 
 ```python
 # Long List of parameters
 # plt.rcParams
+
+```
+
+
+```python
+import os
+import shutil
+
+def update_readme(notebook_path, readme_path):
+    # Convert notebook to markdown
+    os.system(f"jupyter nbconvert --to markdown {notebook_path}")
+
+    # Get the name of the generated markdown file
+    md_filename = 'decorations_quickstart.ipynb'.replace('.ipynb', '.md')
+
+    # Read the content of the newly created markdown file
+    with open(md_filename, 'r') as md_file:
+        content = md_file.read()
+
+    # Update README.md
+    with open(readme_path, 'w') as readme_file:
+        readme_file.write(content)
+
+    # Optionally, remove the generated markdown file if not needed
+    os.remove(md_filename)
+
+# Usage
+update_readme('decorations_quickstart.ipynb', 'README.md')
+
+```
+
+    [NbConvertApp] Converting notebook decorations_quickstart.ipynb to markdown
+    [NbConvertApp] Support files will be in decorations_quickstart_files/
+    [NbConvertApp] Writing 8028 bytes to decorations_quickstart.md
+
+
+
+```python
 
 ```
