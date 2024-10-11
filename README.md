@@ -21,13 +21,13 @@ To install the package, you can use `pip`. You have two options:
    git clone https://github.com/edgar-perez-vidal/decorations.git
    cd decorations
    pip install -e .
-To get started, check out the the tutorial below or check out the decorations_quickstart notebook!
+To get started, check out the tutorial below or check out the decorations_quickstart notebook!
 If you make use of this package, please send over any figures so I can show them case it here!
 
 
 # Tutorial for the package decorations, based in Matplotlib
 
-The `decorations` package was created to address a common challenge faced by many students and researchers: the need to generate numerous test plots using basic Matplotlib settings, only to return later to beautify them for submission or feedback. This often results in extra work and inconsistent presentation quality.
+The `decorations` module was created to address a common challenge faced by many students and researchers: the need to generate numerous test plots using basic Matplotlib settings, only to return later to beautify them for submission or feedback. This often results in extra work and inconsistent presentation quality.
 
 Decorations solves this problem by offering pre-configured plotting settings that produce aesthetically pleasing visuals right from the start. The package streamlines the plotting process, enabling users to create high-quality graphics immediately, without sacrificing the flexibility to further customize their plots as needed.
 
@@ -53,7 +53,7 @@ y2 = np.cos(x)
 
 y1_noisy = y1 + 0.2 * np.random.normal(size=x.size)  # Add some noise
 
-# Create the sine wave plot with error bars
+# Create the sine wave plot with a noisy signal
 plt.figure()
 plt.scatter(x, y1_noisy, label='Data',)
 plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
