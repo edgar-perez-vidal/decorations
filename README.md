@@ -29,7 +29,7 @@ To install the package, you can use `pip`. You have two options:
 This package enhances Matplotlib plots by using LaTeX for high-quality text rendering. The following is applied when the package is loaded:
 
 ```python
-"text.usetex": latex,  # Enable LaTeX formatting
+"text.usetex": True,  # Enable LaTeX formatting
 ```
 
 To take full advantage of these LaTeX features, you must have LaTeX installed on your system.
@@ -144,7 +144,7 @@ load_plot_settings(
 ```python
 # Create the sine wave plot with error bars
 plt.figure()
-plt.plot(x, y1, label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
+plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
 plt.scatter(x, y1_noisy, label='Data',)
 
 plt.xlabel('x')
