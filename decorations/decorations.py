@@ -18,7 +18,6 @@ def load_plot_settings(
     dpi=175, 
     colors=None, 
     markers=None, 
-    latex=True
 ):
     """
     Load global Matplotlib settings for plots.
@@ -42,7 +41,7 @@ def load_plot_settings(
 
     # Global Matplotlib settings
     plt.rcParams.update({
-        "text.usetex": latex,  # Enable LaTeX formatting
+        "text.usetex": True,  # Enable LaTeX formatting
         "font.family": "serif",  # Use serif font for LaTeX
         "font.size": fontsize,  # Set global font size
         "mathtext.fontset": 'stix',  # Use STIX fonts for math text
