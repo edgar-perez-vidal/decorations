@@ -298,6 +298,8 @@ Super cool! To see the matplotlib parameters run the following.
 
 ```
 
+Update READ.md
+
 
 ```python
 import os
@@ -328,7 +330,7 @@ update_readme('decorations_quickstart.ipynb', 'README.md')
 
     [NbConvertApp] Converting notebook decorations_quickstart.ipynb to markdown
     [NbConvertApp] Support files will be in decorations_quickstart_files/
-    [NbConvertApp] Writing 8028 bytes to decorations_quickstart.md
+    [NbConvertApp] Writing 10390 bytes to decorations_quickstart.md
 
 
 
