@@ -98,7 +98,7 @@ load_plot_settings(
     # Use a custom list for different marker shapes, or leave as None to use the default set
     markers=None,  # default: ['o', 's', '^', 'v', 'D', 'P', 'X']
     
-    latex=False  # Set to True to enable LaTeX formatting for text; set to False for plain text
+    latex=True  # Set to True to enable LaTeX formatting for text; set to False for plain text
 )
 
 # load_plot_settings() # runs on the default setting shown above
@@ -297,8 +297,6 @@ Super cool! To see the matplotlib parameters run the following.
 # plt.rcParams
 
 ```
-
-Update READ.md
 
 
 ```python
