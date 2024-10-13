@@ -174,7 +174,7 @@ ax2.axhline(0, color='k', linestyle='--')  # Zero line for residuals
 ax2.set_ylim(-.7,.7)
 
 ax2.set_xlabel("X values")
-ax2.set_ylabel("Residuals",fontsize = 10)
+ax2.set_ylabel("Residuals")
 
 # Adjust layout
 plt.tight_layout()
@@ -299,39 +299,6 @@ Super cool! To see the matplotlib parameters run the following.
 ```
 
 Update READ.md
-
-
-```python
-import os
-import shutil
-
-def update_readme(notebook_path, readme_path):
-    # Convert notebook to markdown
-    os.system(f"jupyter nbconvert --to markdown {notebook_path}")
-
-    # Get the name of the generated markdown file
-    md_filename = 'decorations_quickstart.ipynb'.replace('.ipynb', '.md')
-
-    # Read the content of the newly created markdown file
-    with open(md_filename, 'r') as md_file:
-        content = md_file.read()
-
-    # Update README.md
-    with open(readme_path, 'w') as readme_file:
-        readme_file.write(content)
-
-    # Optionally, remove the generated markdown file if not needed
-    os.remove(md_filename)
-
-# Usage
-update_readme('decorations_quickstart.ipynb', 'README.md')
-
-```
-
-    [NbConvertApp] Converting notebook decorations_quickstart.ipynb to markdown
-    [NbConvertApp] Support files will be in decorations_quickstart_files/
-    [NbConvertApp] Writing 10390 bytes to decorations_quickstart.md
-
 
 
 ```python
