@@ -49,7 +49,7 @@ def load_plot_settings(
         
         # Set color cycle: Color blind friendly! Highly encourage taking a look at Paul Tol's Notes, provides some good color theory for data visualization
         # Reference:  https://personal.sron.nl/~pault 
-        "axes.prop_cycle": cycler('color', colors) + cycler('marker', markers) + cycler('linestyle', len(markers)* ['']),
+        "axes.prop_cycle": cycler('color', colors) + cycler('marker', markers),
 
         # Set default figure size
         "figure.figsize": figsize,
@@ -117,4 +117,6 @@ error_bar_settings = {
     'elinewidth': 0.2,     # Error bar line width (slightly thicker for clarity)
     'alpha': 0.9,          # Slight transparency for better layering
     'zorder': 2,           # Control layering so error bars are on top
+    'linestyle': 'none'    # Do not connect data points
+
 }

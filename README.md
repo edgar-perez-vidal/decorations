@@ -104,7 +104,6 @@ Pretty standard plot... Lets see what we can do to improve
 
 ## Using the `load_plot_settings` Function
 
-In this example, we'll demonstrate how to use the **decorations** package to create a plot with error bars and residuals.
 
 
 ```python
@@ -145,7 +144,7 @@ load_plot_settings(
 ```python
 # Create the sine wave plot with error bars
 plt.figure()
-plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
+plt.plot(x, y1, label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
 plt.scatter(x, y1_noisy, label='Data',)
 
 plt.xlabel('x')
@@ -321,5 +320,10 @@ Super cool! To see the matplotlib parameters run the following.
 ```python
 # Long List of parameters
 # plt.rcParams
+
+```
+
+
+```python
 
 ```
