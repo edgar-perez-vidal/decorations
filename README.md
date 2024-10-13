@@ -16,11 +16,39 @@ To install the package, you can use `pip`. You have two options:
 1. **Install directly from GitHub**:
    ```bash
    pip install git+https://github.com/edgar-perez-vidal/decorations.git
+   ```
 2. **Clone the repository and install locally** (Recommended for Personalization):
    ```bash  
    git clone https://github.com/edgar-perez-vidal/decorations.git
    cd decorations
    pip install -e .
+   ```
+
+## Requirements
+
+This package enhances Matplotlib plots by using LaTeX for high-quality text rendering. The following is applied when the package is loaded:
+
+```python
+"text.usetex": latex,  # Enable LaTeX formatting
+```
+
+To take full advantage of these LaTeX features, you must have LaTeX installed on your system.
+
+### LaTeX Installation
+
+If LaTeX is not installed, you can follow the instructions below to install it, including the necessary LaTeX packages:
+
+- **macOS**: Install MacTeX via [Homebrew](https://brew.sh/):
+   ```bash
+   brew install --cask mactex
+   ```
+- **Linux**: Install `texlive` or `texlive-full` :
+   ```bash
+   sudo apt-get install texlive-full
+   ```
+- **Windows**: Download and install [MiKTeX](https://miktex.org/download).
+
+
 To get started, check out the the tutorial below or check out the decorations_quickstart notebook!
 If you make use of this package, please send over any figures so I can show them case it here!
 
@@ -68,7 +96,7 @@ plt.show()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_3_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_4_0.png)
     
 
 
@@ -97,8 +125,6 @@ load_plot_settings(
     # Markers for plotting
     # Use a custom list for different marker shapes, or leave as None to use the default set
     markers=None,  # default: ['o', 's', '^', 'v', 'D', 'P', 'X']
-    
-    latex=True  # Set to True to enable LaTeX formatting for text; set to False for plain text
 )
 
 # load_plot_settings() # runs on the default setting shown above
@@ -132,7 +158,7 @@ plt.show()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_7_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_8_0.png)
     
 
 
@@ -189,7 +215,7 @@ plt.tight_layout()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_9_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_10_0.png)
     
 
 
@@ -248,7 +274,7 @@ plt.show()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_12_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_13_0.png)
     
 
 
@@ -285,7 +311,7 @@ plt.show()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_14_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_15_0.png)
     
 
 
@@ -295,10 +321,5 @@ Super cool! To see the matplotlib parameters run the following.
 ```python
 # Long List of parameters
 # plt.rcParams
-
-```
-
-
-```python
 
 ```
