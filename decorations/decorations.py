@@ -10,7 +10,6 @@ figsize = 3.5,3.5 # For two column paper figure size should be (3.5, any) (base 
 colors = ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']  # Colorblind-friendly palette
 markers = ['o', 's', '^', 'v', 'D', 'P', 'X']  # Different marker shapes to cycle through
 
-
 def load_plot_settings(
     fontsize=10, 
     figsize=(3.5, 3.5), 
@@ -49,11 +48,11 @@ def load_plot_settings(
         
         # Set color cycle: Color blind friendly! Highly encourage taking a look at Paul Tol's Notes, provides some good color theory for data visualization
         # Reference:  https://personal.sron.nl/~pault 
-        "axes.prop_cycle": cycler('color', colors) + cycler('marker', markers),
+        "axes.prop_cycle": cycler('color', colors) +  cycler('marker', markers),
 
         # Set default figure size
         "figure.figsize": figsize,
-        "figure.dpi": 175, # this is mainly to make figure bigger in jupyternotebook, save at 300+,dpi
+        "figure.dpi": dpi, # this is mainly to make figure bigger in jupyternotebook, save at 300+,dpi
 
         # Ticks settings for x axis
         "xtick.direction": 'in',
@@ -77,7 +76,9 @@ def load_plot_settings(
         "axes.linewidth": 0.5,
         "grid.linewidth": 0.5,
         "lines.linewidth": .75,
-        
+        "lines.marker": 'none',   # Set default marker for lines to 'none'
+        "lines.linestyle": '-',   # Set the default line style
+
         # Legend settings
         "legend.frameon": False, # No box
         "legend.handlelength": 1.25, # Distance the line length in legend
