@@ -116,25 +116,26 @@ load_plot_settings(
     major_tick_size = 5, # set the length of the major ticks, minor ticks are half this value
     dpi=175,  # Dots per inch for plot resolution (higher values result in better quality)
               # This is mainly to scale the output plot but maintain figsize, standard dpi when saving fig is set to 300
-    
     # Colors for cycling through data points
     # Use a custom list for your own palette, or leave as None to use the default color-blind friendly palette
     colors=None,  # default: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
-    
+
     # Markers for plotting
     # Use a custom list for different marker shapes, or leave as None to use the default set
-    markers=None,  # default: ['o', 's', '^', 'v', 'D', 'P', 'X']
+    use_tex= True
 )
 
 # load_plot_settings() # runs on the default setting shown above
 ```
 
-    Hi edgar839, you have imported plooting decorations. 
+    Hi edgar839, you have imported plotting decorations. 
         Note: 
         Figsize = (3.5, 3.5) for coloumn figures
+        dpi = 175
         Fontsize: 10
         Colorblind Pallet: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
         Marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
+        Use tex? True
         Cheers!
 
 
@@ -185,7 +186,7 @@ gs = gridspec.GridSpec(2, 1, height_ratios=[3, 1],hspace= 0)  # 3:1 ratio for to
 
 # Top panel: data and model
 ax1 = fig.add_subplot(gs[0])
-ax1.errorbar(x, y_data, yerr = yerr, **error_bar_settings, label="Data")  # Plot data
+ax1.errorbar(x, y_data, yerr = yerr, fmt='o',**error_bar_settings, label="Data")  # Plot data
 ax1.plot(x, y_model, 'k-', label="Model")  # Plot model
 ax1.legend()
 ax1.set_ylabel("Y values")
@@ -195,7 +196,7 @@ ax1.tick_params(axis='x', which='both', labelbottom=False)
 
 # Bottom panel: residuals
 ax2 = fig.add_subplot(gs[1])
-ax2.errorbar(x, residuals,yerr =yerr, **error_bar_settings)  # Plot residuals
+ax2.errorbar(x, residuals,yerr =yerr, fmt='o',**error_bar_settings)  # Plot residuals
 ax2.axhline(0, color='k', linestyle='--')  # Zero line for residuals
 ax2.set_ylim(-.7,.7)
 
@@ -233,17 +234,35 @@ error_bar_settings
 
 
 
-    {'ms': 3.0,
+    {'ms': 3.5,
      'mec': 'black',
      'ecolor': 'black',
-     'capsize': 1.25,
-     'capthick': 0.2,
-     'mew': 0.2,
-     'elinewidth': 0.2,
+     'capsize': 1.3,
+     'capthick': 0.25,
+     'mew': 0.25,
+     'elinewidth': 0.25,
      'alpha': 0.9,
-     'zorder': 2,
-     'linestyle': 'none'}
+     'zorder': 2}
 
+
+
+here are some good markers and linestyle to start of with, of course if you dont want a line connecting your points, remove the linestyle argument!
+
+
+```python
+from decorations import markers, linestyles
+```
+
+
+```python
+print(f"""
+Markers = {markers}      
+linestyles = {linestyles}""")
+```
+
+    
+    Markers = ['o', 's', '^', 'v', 'D', 'P', 'X']      
+    linestyles = ['-', '-.', '--', ':', '-', '-.', '--', ':']
 
 
 
@@ -259,8 +278,8 @@ yerr1 = np.random.uniform(0.1, 0.5, size=len(x))
 
 fig, ax = plt.subplots(dpi = 175)
 # Plot the data with error bars and cycle marker shapes
-for i in np.arange(10):
-    ax.errorbar(x, y1+i, yerr=yerr1,**error_bar_settings)
+for i in np.arange(7):
+    ax.errorbar(x, y1+i, yerr=yerr1,fmt = markers[i], linestyle= linestyles[i], **error_bar_settings)
 
 
 # Add labels and legend
@@ -274,7 +293,7 @@ plt.show()
 
 
     
-![png](decorations_quickstart_files/decorations_quickstart_13_0.png)
+![png](decorations_quickstart_files/decorations_quickstart_16_0.png)
     
 
 
