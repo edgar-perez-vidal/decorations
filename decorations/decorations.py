@@ -84,8 +84,6 @@ def load_plot_settings(
         "axes.linewidth": 0.5,
         "grid.linewidth": 0.5,
         "lines.linewidth": .75,
-        "lines.marker": 'none',   # Set default marker for lines to 'none'
-        "lines.linestyle": '-',   # Set the default line style
 
         # Legend settings
         "legend.frameon": False, # No box
