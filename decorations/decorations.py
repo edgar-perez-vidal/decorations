@@ -108,7 +108,7 @@ def load_plot_settings(
     dpi = {dpi}
     Fontsize: {fontsize}
     Colorblind Pallet: {colors}
-    Marker: {markers}
+    marker: {markers}
     linestyles: {linestyles}
     Use tex? {use_tex}
     Cheers!'''

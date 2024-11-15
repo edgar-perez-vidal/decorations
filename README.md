@@ -84,8 +84,7 @@ y1_noisy = y1 + 0.2 * np.random.normal(size=x.size)  # Add some noise
 # Create the sine wave plot with error bars
 plt.figure()
 plt.scatter(x, y1_noisy, label='Data',)
-plt.plot(x, y1, marker = '', label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
-
+plt.plot(x, y1, label='Model',) 
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
@@ -134,7 +133,7 @@ load_plot_settings(
         dpi = 175
         Fontsize: 10
         Colorblind Pallet: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
-        Marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
+        marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
         linestyles: ['-', '-.', '--', ':', '-', '-.', '--', ':']
         Use tex? True
         Cheers!
@@ -146,8 +145,7 @@ load_plot_settings(
 ```python
 # Create the sine wave plot with error bars
 plt.figure()
-plt.plot(x, y1, marker = 'none',label='Model',) # As of version='0.1.0', you will need to state marker = 'none' to get a line
-
+plt.plot(x, y1,label='Model',)
 plt.scatter(x, y1_noisy, label='Data',)
 
 plt.xlabel('x')
@@ -257,12 +255,12 @@ from decorations import markers, linestyles
 
 ```python
 print(f"""
-Markers = {markers}      
+markers = {markers}      
 linestyles = {linestyles}""")
 ```
 
     
-    Markers = ['o', 's', '^', 'v', 'D', 'P', 'X']      
+    markers = ['o', 's', '^', 'v', 'D', 'P', 'X']      
     linestyles = ['-', '-.', '--', ':', '-', '-.', '--', ':']
 
 
@@ -341,15 +339,5 @@ Super cool! To see the matplotlib parameters run the following.
 ```python
 # Long List of parameters
 # plt.rcParams
-
-```
-
-
-```python
-
-```
-
-
-```python
 
 ```
