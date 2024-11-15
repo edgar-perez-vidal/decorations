@@ -135,6 +135,7 @@ load_plot_settings(
         Fontsize: 10
         Colorblind Pallet: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
         Marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
+        linestyles: ['-', '-.', '--', ':', '-', '-.', '--', ':']
         Use tex? True
         Cheers!
 
@@ -327,6 +328,12 @@ fig = corner.corner(data,
 plt.show()
 
 ```
+
+
+    
+![png](decorations_quickstart_files/decorations_quickstart_18_0.png)
+    
+
 
 Super cool! To see the matplotlib parameters run the following.
 
