@@ -40,20 +40,17 @@ def load_plot_settings(
         # Configure matplotlib for LaTeX text rendering
         plt.rcParams.update({
             "text.usetex": True,  # Enable LaTeX formatting
-            "font.family": "serif",  # Use serif font for LaTeX
             "text.latex.preamble": r'\usepackage{textgreek} \usepackage{amsmath}',  # Include LaTeX packages
         })
     else:
         # Configure matplotlib without LaTeX dependency
-        plt.rcParams['mathtext.fontset'] = 'stix'
-        plt.rcParams['font.family'] = 'STIXGeneral'
-        plt.rcParams['font.size'] = fontsize
+        plt.rcParams['font.family'] = 'serif'
 
     plt.rcParams.update({
         "font.size": fontsize,  # Set global font size
         "mathtext.fontset": 'stix',  # Use STIX fonts for math text
-        "text.latex.preamble": r'\usepackage{textgreek} \usepackage{amsmath}',  # Include LaTeX packages
-        
+        "font.family": "serif",  # Use serif font for LaTeX
+
         # Set color cycle: Color blind friendly! Highly encourage taking a look at Paul Tol's Notes, provides some good color theory for data visualization
         # Reference:  https://personal.sron.nl/~pault 
         "axes.prop_cycle": cycler('color', colors),
