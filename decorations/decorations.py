@@ -44,6 +44,7 @@ def load_plot_settings(
         })
     else:
         # Configure matplotlib without LaTeX dependency
+        "text.usetex": False,  # Enable LaTeX formatting
         plt.rcParams['font.family'] = 'serif'
 
     plt.rcParams.update({
