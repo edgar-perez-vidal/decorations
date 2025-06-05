@@ -106,7 +106,7 @@ def load_plot_settings(
     dpi = {dpi}
     Fontsize: {fontsize}
     Colorblind Pallet: {colors}
-    marker: {markers}
+    markers: {markers}
     linestyles: {linestyles}
     Use tex? {use_tex}
     Cheers!'''
@@ -123,6 +123,6 @@ error_bar_settings = {
     'capthick': 0.25,       # Thickness of the caps
     'mew': 0.25,            # Marker edge width
     'elinewidth': 0.25,     # Error bar line width (slightly thicker for clarity)
-    'alpha': 0.9,          # Slight transparency for better layering
+    # 'alpha': 0.9,          # Slight transparency for better layering
     'zorder': 2,           # Control layering so error bars are on top
 }

@@ -133,7 +133,7 @@ load_plot_settings(
         dpi = 175
         Fontsize: 10
         Colorblind Pallet: ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']
-        marker: ['o', 's', '^', 'v', 'D', 'P', 'X']
+        markers: ['o', 's', '^', 'v', 'D', 'P', 'X']
         linestyles: ['-', '-.', '--', ':', '-', '-.', '--', ':']
         Use tex? True
         Cheers!
@@ -166,10 +166,6 @@ ahh much better! Lets try something a little cleaner, such as fitting fake data 
 
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-
 # Generate some test data (sine wave with noise)
 x = np.linspace(0, 10, 100)
 y_data = np.sin(x) + 0.1 * np.random.normal(size=x.size)  # Noisy sine wave
@@ -240,7 +236,6 @@ error_bar_settings
      'capthick': 0.25,
      'mew': 0.25,
      'elinewidth': 0.25,
-     'alpha': 0.9,
      'zorder': 2}
 
 
@@ -339,5 +334,10 @@ Super cool! To see the matplotlib parameters run the following.
 ```python
 # Long List of parameters
 # plt.rcParams
+
+```
+
+
+```python
 
 ```
