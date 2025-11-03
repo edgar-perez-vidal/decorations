@@ -7,7 +7,7 @@ import getpass
 username = getpass.getuser()  # Get the current username
 fontsize = 10 #latex ApJ, MNRAS ect
 figsize = 3.5,3.5 # For two column paper figure size should be (3.5, any) (base x height)
-colors = ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']  # Colorblind-friendly palette
+#colors = ['#4477AA', '#EE6677', '#228833', '#CCBB44', '#66CCEE', '#AA3377', '#BBBBBB']  # Colorblind-friendly palette
 markers = ['o', 's', '^', 'v', 'D', 'P', 'X']  # Different marker shapes to cycle through
 linestyles = ['-', '-.', '--', ':', '-', '-.', '--', ':'] 
 
@@ -111,6 +111,7 @@ def load_plot_settings(
     Use tex? {use_tex}
     Cheers!'''
     )
+    
 
 # Come back to this, I will cycle marker types, though not sure if its best to cycle shapes or colors...
 error_bar_settings = {
